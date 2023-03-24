@@ -62,7 +62,7 @@ body {
     height: 460px;
 
     margin-top: 50px;
-
+    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     background-color: rgb(120, 110, 185);
@@ -160,7 +160,9 @@ body {
     display: none;
     justify-content: center;
 }
-
+.text{
+    display: none;
+}
 @media (max-width: 600px){
     .container {
         flex-direction: column;
@@ -168,10 +170,18 @@ body {
         overflow: auto;
     }
     .table{
+        /* убирает таблицу для телефона */
         display: none;
     }
     .menu{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
+    
+    .text{
+        display: contents;
+        text-align: center;
+    }
 }
+/* настроить нижний отступ у самостоятельных настроек */

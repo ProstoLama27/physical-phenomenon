@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="menu">
+    
+     <div class="menu"> <!-- доп меню для телефона -->
+        
         <table class="value_table">
-            <tr class="need_click" onclick="getkInTable('oneG')"><td class="choice">Алюминий</td><td class="choice" id="oneG">138.6</td></tr>
+           <tr>
+            <th>Таблица </th>
+           </tr>
+        <tr class="need_click" onclick="getkInTable('oneG')"><td class="choice">Алюминий</td><td class="choice" id="oneG">138.6</td></tr>
          <tr class="need_click" onclick="getkInTable('twoG')"><td>Вольфрам</td><td id="twoG">720</td></tr>
          <tr class="need_click" onclick="getkInTable('threeG')"><td>Германий</td><td id="threeG">165.3</td></tr>
          <tr class="need_click" onclick="getkInTable('fourG')"><td>Дюралюминий</td><td id="fourG">147.2</td></tr>
          <tr class="need_click" onclick="getkInTable('fiveG')"><td>Иридий</td><td id="fiveG">1098.6</td></tr>
         </table>
         <table class="value_table">
+            <tr>
+                <th> жесткости </th>
+               </tr>
             <tr class="need_click" onclick="getkInTable('sixG')"><td>Латунь</td><td id="sixG">187.73</td></tr>
          <tr class="need_click" onclick="getkInTable('sevenG')"><td>Медь</td><td id="sevenG">217.06</td></tr>
          <tr class="need_click" onclick="getkInTable('eightG')"><td>Серебро</td><td id="eightG">155.73</td></tr>
@@ -44,7 +52,7 @@
             </svg>
             <div class="block" id="block"></div>
         </div>
-        <div></div>
+        
         <div id="stat">
             <h1>$$ T = 2 π \sqrt{m \over k}$$</h1>
                 <div class="inpOne"> 
