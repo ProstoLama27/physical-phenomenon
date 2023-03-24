@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 1000px;
+
+    background-color: rgb(238, 235, 209);
+}
+
+:root {
+    --h: 170px;
+    --x: 100px;
+    --x0: 0;
+    --x1: 0;
+    --z: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    overflow-y: hidden;
+
+} 
+
+.model {
+    width: 200px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pr {
+    --T: 0.99s;
+
+    width: 50px;
+    height: var(--h);
+
+    transform-origin: top;
+    transform: scale(var(--z));
+    animation: movePr var(--T) infinite;
+}
+
+.block {
+    --m: 50px;
+
+    height: var(--m);
+    width: var(--m);
+
+    border-radius: 5px;
+    background-color: rgb(58, 71, 82);
+}
+
+#stat {
+    width: 400px;
+    height: 460px;
+
+    margin-top: 50px;
+
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: rgb(120, 110, 185);
+}
+
+.inpOne {
+    margin-left: 20px;
+}
+
+.textT {
+    font-size: 4vmin;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+#btn {
+    width: 200px;
+    height: 50px;
+
+    /* margin-left: 80px; */
+
+    font-size: 3vmin;
+    border-radius: 1vmin;
+
+    color: darkslateblue;
+    background-color: rgb(154, 211, 211);
+}
+
+#btn:hover {
+    color: black;
+    background-color: rgb(33, 170, 170);
+}
+
+#btnStop {
+    width: 200px;
+    height: 50px;
+
+    margin-top: 20px;
+    
+    font-size: 3vmin;
+    border-radius: 1vmin;
+    color: darkslateblue;
+    background-color: rgb(154, 211, 211);
+}
+
+#btnStop:hover {
+    color: black;
+    background-color: rgb(33, 170, 170);
+}
+.buttons {
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+@keyframes movePr {
+    0%{
+        height: var(--x0);
+    }
+    50%{
+        height: var(--x1);
+    }
+    100%{
+        height: var(--x0);
+    }
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+}
+/*тут был Егор*/
+.value_table{ 
+    /* внешняя рамка */
+    border: 3px solid black;
+}
+.value_table td{
+    /* настройки внутри таблицы */
+    text-align:  center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.need_click:hover{
+    /* при наведении на значение, оно подсвечивается */
+    background-color: rgb(154, 211, 211);
+}
+#V, #X {
+    width: 100%;
+}
+.menu{
+    display: none;
+    justify-content: center;
+}
+
+@media (max-width: 600px){
+    .container {
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+    }
+    .table{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+}
